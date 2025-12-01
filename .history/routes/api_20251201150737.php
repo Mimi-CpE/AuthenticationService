@@ -12,8 +12,6 @@ Route::prefix('auth')->group(function () {
     Route::post('login', [AuthController::class, 'login']);
 });
 
-Route::post('logout', [AuthController::class, 'logout']);
-
 Route::get('auth/public-key', function () {
     return response()->json([
         'key' => file_get_contents(storage_path('public.pem')),
