@@ -60,7 +60,7 @@ class User extends Authenticatable
     public function getJWTCustomClaims()
     {
         return [
-            'role' => $this->role,
+            'role' => $this->role_id,
             'email' => $this->email
         ];
     }

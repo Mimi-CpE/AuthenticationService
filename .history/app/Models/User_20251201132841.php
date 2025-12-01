@@ -46,22 +46,4 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-
-    public function role()
-    {
-        return $this->hasOne(Role::class, 'id', 'role_id');
-    }
-
-    public function getJWTIdentifier()
-    {
-        return $this->getKey();
-    }
-
-    public function getJWTCustomClaims()
-    {
-        return [
-            'role' => $this->role,
-            'email' => $this->email
-        ];
-    }
 }
