@@ -16,7 +16,7 @@ class AuthService implements AuthServiceInterface
         $this->userRepo = $userRepo;
     }
 
-    public function respondWithToken($token, $user = null)
+    protected function respondWithToken($token, $user = null)
     {
         if (!$user) {
             $user = Auth::guard('api')->user();

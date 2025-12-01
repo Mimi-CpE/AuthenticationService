@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Http\Controllers\User;
+
+use App\Http\Controllers\Controller;
+use App\Repositories\User\UserRepositoryInterface;
+use App\Services\User\UserServiceInterface;
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    private UserRepositoryInterface $userRepo;
+    private UserServiceInterface $userService;
+
+    public function __construct(
+        UserRepositoryInterface $userRepo,
+        UserServiceInterface $userService,
+    ) {}
+}

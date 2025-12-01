@@ -3,11 +3,9 @@
 namespace App\Providers;
 
 use App\Services\Auth\AuthService;
-use App\Services\User\UserService;
-
 use App\Services\Auth\AuthServiceInterface;
+use App\Services\User\UserService;
 use App\Services\User\UserServiceInterface;
-
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

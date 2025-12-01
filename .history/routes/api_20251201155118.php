@@ -3,7 +3,6 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\User\UserController;
 
 Route::prefix('auth')->group(function () {
     Route::post('login', [AuthController::class, 'login']);
@@ -21,5 +20,5 @@ Route::get('auth/public-key', function () {
 Route::middleware([
     'auth:api'
 ])->prefix('/user')->group(function () {
-    Route::post('/', [UserController::class, 'store']);
+    // Route::post('/', )
 });
